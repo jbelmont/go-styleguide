@@ -379,6 +379,15 @@ func TestRun(t *testing.T) {
 Only use mocks if not otherwise possible, favor real implementations.
 – [Mitchell Hashimoto at GopherCon 2017](https://youtu.be/8hQG7QlcLBk?t=26m51s)
 
+#### FoodLogiQ Ports and Adapters
+
+*We don't have to follow the prescriptive Mocking advice given in the original style guide.*
+
+- We will be using a Repository Pattern so we can easily mock out the Database Layer
+[Repository Pattern](https://deviq.com/repository-pattern/)
+
+- Here is some information on [Ports and Adapters](https://web.archive.org/web/20060711221010/http://alistair.cockburn.us:80/index.php/Hexagonal_architecture)
+
 ### Avoid DeepEqual
 
 **Don't:**
@@ -441,6 +450,10 @@ func ExamleSomeInterface_SomeMethod(){
 }
 ```
 
+*We can do what coding competitions like CodeChef do which show output examples to demonstrate usage with input and output.*
+
+[Code Chef Palace of Kings Problem](https://www.codechef.com/problems/ZUBPALK)
+
 ## Use linters
 
 Use all the linters included in [gometalinter](https://github.com/alecthomas/gometalinter) to lint your projects before committing.
@@ -486,7 +499,7 @@ func findMax(inputs []int) int {
 }
 ```
 Single-letter variable names are fine in the following cases.
-* They are absolut standard like ...
+* They are absolute standard like ...
 	* `t` in tests
 	* `r` and `w` in http request handlers
 	* `i` for the index in a loop
